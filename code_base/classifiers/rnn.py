@@ -135,7 +135,8 @@ class SentimentAnalysisRNN(object):
         # defined above to store loss and gradients; grads[k] should give the      #
         # gradients for self.params[k].                                            #
         ############################################################################
-        pass
+        h, cache = rnn_forward(wordvecs, h0, Wx, Wh, b)
+        
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################
